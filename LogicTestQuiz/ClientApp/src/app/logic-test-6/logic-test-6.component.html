@@ -3,10 +3,12 @@
 <form>
   Input Cal: <input type="text" id="inputNum" name="inputNum" #inputNum>
   <br>
+  <span style="font-style:italic">*Example : 70+82*79-78+84/73+83</span>
+  <br>
   <button mat-raised-button (click)="cal(inputNum.value)">Submit</button>
 </form>
 
-Result is : <span [innerHTML]="resultCal"></span>
+Result is : <span style="font-weight:bold" [innerHTML]="resultCal"></span>
 
 <div></div>
 <span> ใช้หลักการของ binary expression tree </span>
