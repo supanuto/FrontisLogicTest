@@ -22,7 +22,7 @@ namespace LogicTestQuiz.Controllers
 
         // GET api/<LogicTest1Controller>/5
         [HttpGet("{id}")]
-        public IEnumerable<string> Get(int id)
+        public IEnumerable<string> Get(ulong id)
         {
             string result = cal1(id);
             return new string[] { result.ToString() };
@@ -47,18 +47,18 @@ namespace LogicTestQuiz.Controllers
         {
         }
 
-        private string cal1(int number)
+        private string cal1(ulong number)
         {
             StringBuilder sb = new StringBuilder();
             sb.Remove(0, sb.Length);
             string tmp = "";
-            int numberTmp, n;
+            ulong numberTmp, n;
             //number = 5;
             numberTmp = 0;
             while (numberTmp <= number)
             {
                 n = 1;
-                for (int i = numberTmp; i > 0; i--)
+                for (ulong i = numberTmp; i > 0; i--)
                 {
                     n *= i;
                 }
