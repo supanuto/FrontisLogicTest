@@ -1,0 +1,11 @@
+<h1 id="tableLabel">logic-test-1</h1>
+
+<form>
+  Input Number: <input type="text" id="inputNum" name="inputNum" #inputNum>
+  <br>
+  <button mat-raised-button (click)="cal(inputNum.value)">Submit</button>
+</form>
+
+<div [innerHTML]="resultCal">
+</div>
+
